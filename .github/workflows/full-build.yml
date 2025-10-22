@@ -132,7 +132,7 @@ jobs:
     timeout-minutes: 10
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v5
         with:
           name: ${{ needs.linux-appimage.outputs.appimage }}
           path: .
@@ -220,7 +220,7 @@ jobs:
     if: ${{ github.actor != 'dependabot[bot]' }}
     timeout-minutes: 10
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v5
         id: download
         with:
           name: ${{ needs.macos.outputs.artifact }}
@@ -368,7 +368,7 @@ jobs:
     timeout-minutes: 10
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v5
         with:
           name: ${{ needs.windows.outputs.installer }}
           path: .
